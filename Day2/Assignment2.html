@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+
+<body>
+    <h2>Assignment 2 - DAY 2</h2>
+    <h4>Methods in Array</h4>
+    <script>
+        console.group("array");
+        let heist = ['berlin', 'moscow', 'danver'];
+        console.log(heist);
+
+        document.write("copyWithin()<br>");
+        console.log(heist.copyWithin(2, 0));
+
+        document.write("check()<br>");
+        let age = ['24', '35', '12', '56'];
+        function checkAdult(age) {
+            return age >= 18;
+        }
+        function ageFunction() {
+            console.log(age.every(checkAdult));
+        }
+        ageFunction()
+
+        document.write("reduce()<br>");
+        let numbers = [240, 50, 60]
+        console.log(numbers.reduce(myFunc))
+        function myFunc(total, num) {
+            return total - num;
+        }
+
+        document.write("reverse()<br>");
+        function valuefunc() {
+            let hest = ['berlin', 'tokyo', 'nairobi'];
+            console.log(hest.reverse());
+        }
+        valuefunc()
+
+        document.write("pop()<br>");
+        console.log(heist.pop());
+
+        document.write("push()<br>");
+        heist.push('rio');
+        console.log(heist);
+
+        console.groupEnd("array");
+    </script>
+
+    <h4>Methods in String</h4>
+    <script>
+        console.group("string");
+        document.write("match()<br>");
+        var str = "MAY DAY, may day.I repeat";
+        console.log(str.match(/ay/g));  // by adding '/g' all the matched entries are displayed as array
+
+        document.write("fromCharCode()<br>");
+        console.log(String.fromCharCode(98));   //returns the character for that ascii value
+
+        document.write("includes()<br>");
+        console.log(str.includes("day"));
+
+        document.write("localeCompare()<br>");    //Returns -1 if str1 is sorted before str2. 
+        let str1 = "apple"                           //Returns 0 if the two strings are equal. 
+        let str2 = "banana"                          //Returns 1 if str1 is sorted after str2.            
+        let rslt = str1.toString().localeCompare(str2);
+        console.log(rslt);
+
+        document.write("substr()<br>");
+        console.log(str.substr(5, 3));
+
+        document.write("substring()<br>");
+        console.log(str.substring(5, 25));
+
+        console.groupEnd("string");
+    </script>
+</body>
+
+</html>
