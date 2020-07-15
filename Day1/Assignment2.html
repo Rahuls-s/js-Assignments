@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+</head>
+
+<body>
+    <h2>Difference b/w 'var', 'let', 'const'</h2>
+    <h4>var</h4>
+    <p>The scope is global when a 'var' variable is declared outside a function.<br>
+        'var' is function scoped when it is declared within a function.<br>
+        'var' can be updated and re-declared</p>
+    <script>
+        console.group("var")
+        var msg = "Hello World"
+        var msg = "Hi World"        //var can be redefined
+        msg = "hello there"         //var can be updated
+        console.log(msg);
+        function newFunction() {
+            var inside = "Inside curly braces"
+            console.log("Inside braces");
+            console.log(msg);        //Assessible
+        }
+        newFunction()
+        console.log(inside);         //Not assessible as it is out of scope
+        console.groupEnd("var");
+    </script>
+    <h4>let</h4>
+    <p>'let' is block scoped<br>
+        A block is a chunk of code bounded by {}.<br>
+        A block lives in curly braces<br>
+        A variable declared in a block with 'let' is only available for use within that block<br>
+        'let' can be updated but not re-declared
+    </p>
+    <script>
+        console.group("let")
+        let message = "Hello World"
+        message = "Hi World"              //let can be updated
+        //let message = "hello there"       //let cannot be redefined "Throws an error"
+        console.log(message);
+
+        if (true) {
+            let insde = "Inside curly braces"
+            console.log("Inside braces");
+            console.log(message);        //Assessible
+        }
+        console.log(insde);         //Not assessible as it is out of scope
+
+        console.groupEnd("let")
+    </script>
+    <h4>const</h4>
+    <p>Variables declared with the 'const' maintain constant values<br>
+        'const' declarations can only be accessed within the block they were declared<br>
+        'const' cannot be updated or re-declared
+    </p>
+    <script>
+        console.group("const")
+        const word = "Hello World"
+        //word = "Hi"             //const cannot be updated "Throws an error"
+        // const word = "hey"      //const cannot be redefined "Throws an error"
+        console.log(word);
+        if (true) {
+            let mssg = "Inside curly braces"
+            console.log("Inside braces");
+            console.log(word);        //Assessible
+        }
+        console.log(mssg);         //Not assessible as it is out of scope
+
+        console.groupEnd("const")
+    </script>
+</body>
+
+</html>

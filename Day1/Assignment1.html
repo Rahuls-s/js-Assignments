@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+</head>
+
+<body>
+    <h3>Console Methods</h3>
+    <p>Open the Console</p>
+    <button onclick="firstFunction()"> Start Trace</button>
+    <script>
+
+        // Assert method writes an error in console when the asserstion fails
+        console.assert(document.getElementById("sample"), "There is no element in Id 'sample'");
+
+        // Count method counts the number of time the method is executed.
+        for (var j = 0; j < 5; j++) {
+            console.count();
+        }
+
+        // Error method gives an error in  console
+        console.error("This is an ereor message");
+
+        // warning method gives a warning in console
+        console.warn("This is a warning message");
+
+        // info method gives an info message in the console
+        console.info("Just for your information");
+
+        // log method writes the message in the console
+        console.log("Logging some message");
+
+        // table method tabulates the data 
+        console.table(["Apple", "Banana", "Mango"]);
+
+        // Time method displays the time taken for the specified piece of code to excute
+        console.time("sample")
+        for (var i = 0; i < 100000; i++);
+        console.timeEnd("sample")
+
+        // group method groups the data
+        console.log("Out of group");
+        console.group("group1");
+        console.log("Inside expanded group");
+        console.groupEnd("group1");
+        console.groupCollapsed("grp");
+        console.log("Inside Collapsed group");
+        console.groupEnd("grp")
+
+        // Trace method traces the path of execution
+
+        function firstFunction() {
+            secondFunction();
+        }
+        function secondFunction() {
+            console.trace("Function Execution")
+        }
+    </script>
+
+</body>
+
+</html>
