@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+
+<body>
+    <h2>Assignment 3 - DAY 3</h2>
+    <h4>Program to grade according to marks</h4>
+    <script>
+        let marks = window.prompt("Enter the marks as specified - English Maths Science SocialScience");
+        let eng = Number(marks.split(" ")[0]);
+        let math = Number(marks.split(" ")[1]);
+        let sci = Number(marks.split(" ")[2]);
+        let ss = Number(marks.split(" ")[3]);
+        let grade;
+        let space = '****************************';
+
+        let total = eng + math + sci + ss;
+        // console.log(total);
+
+        // Using conditional statement
+        console.log("output via Conditional Statement");
+        if (total >= 90) {
+            grade = 'S';
+            console.log(`Mark is ${total} and grade is S`);
+        }
+        else if (total >= 70) {
+            grade = 'A';
+            console.log(`Mark is ${total} and grade is A`);
+        }
+        else if (total >= 50) {
+            grade = 'B';
+            console.log(`Mark is ${total} and grade is B`);
+        }
+        else {
+            grade = 'RA';
+            console.log(`Mark is ${total} and Reappear`);
+        }
+        console.log(space);
+
+        // Using ternary operator
+        console.log("output via Ternary Operator");
+        console.log(total >= 90 ? `Mark is ${total} and grade is S` : total >= 70 ? `Mark is ${total} and grade is A` : total >= 50 ? `Mark is ${total} and grade is B` : `Mark is ${total} and Reappear`);
+        console.log(space);
+
+        // Using Switch case
+        console.log("output via Switch case");
+        switch (grade) {
+            case 'S':
+                console.log(`Mark is ${total} and grade is S`);
+                break;
+            case 'A':
+                console.log(`Mark is ${total} and grade is A`);
+                break;
+            case 'B':
+                console.log(`Mark is ${total} and grade is B`);
+                break;
+            default:
+                console.log(`Mark is ${total} and Reappear`);
+                break;
+        }
+    </script>
+</body>
+
+</html>
