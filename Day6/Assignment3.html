@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+
+<body id="mode">
+
+    <h2>Assignment 3 - DAY 6</h2>
+    <script>
+        // Welcome msg
+        let name = prompt("Enter your Name", 'visitor');
+        document.write(`Greetings ${name}, Welcome to our website.`);
+    </script>
+    <h4 id="time"></h4>
+    <button id="btn" onclick="darkmode()">Toggle between dark & light mode</button>
+
+    <style>
+        .mystyle {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        // // Welcome msg
+        // let name = prompt("Enter your Name", 'visitor');
+        // document.write(`Greetings ${name}, Welcome to our website.`);
+
+
+        // Clock
+        const dttime = document.getElementById("time");
+        function clock() {
+            let time = new Date().toLocaleTimeString();
+            dttime.innerText = time;
+        }
+
+        setInterval(clock, 1000);
+
+        // Dark Mode
+        function darkmode() {
+            let elt = document.getElementById("mode");
+            elt.classList.toggle("mystyle");
+        }
+    </script>
+</body>
+
+</html>

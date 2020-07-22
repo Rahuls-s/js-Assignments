@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+
+<body>
+    <h2>Assignment 2 - DAY 6</h2>
+    <script>
+        let num = prompt("Enter the number to get the multiplication tables", 0);
+        let lstnum = prompt("Enter the last multiplier", 20);
+        if (num != null && num != 0) {
+            document.write(`Multiplication Table of ${num} <br> <br>`);
+            for (let i = 1; i <= lstnum; i++) {
+                let pdt = num * i;
+                document.write(`${num} x ${i} = ${pdt} <br>`);
+                if (i % 10 == 0) {
+                    document.write("<br>");
+                }
+            }
+        }
+        else if (num == null) {
+            document.write("User Cancelled");
+        }
+        else {
+            document.write("Any number multiplied by '0' is always '0'");
+        }
+    </script>
+</body>
+
+</html>

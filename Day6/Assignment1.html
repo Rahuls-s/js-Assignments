@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment 1</title>
+</head>
+
+<body>
+    <h2>Assignment 1 - DAY 6</h2>
+    <script>
+        let arr = ['lightcoral', 'slateblue', 'coral', 'lime', 'khaki', 'skyblue', 'orchid', 'silver', ' 	palevioletred', 'sandybrown'];
+        let i = 0;
+        function bgcolor() {
+            document.body.style.background = arr[i];
+            i++;
+            if (i == 10) {
+                i = 0;
+            }
+        }
+        bgcolor();
+
+        setInterval(bgcolor, 5000);
+    </script>
+</body>
+
+</html>
