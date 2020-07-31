@@ -1,0 +1,58 @@
+body{
+    background: radial-gradient(#E6E6FA 50%,palegreen);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Rowdies', cursive;
+    cursor: default;
+}
+
+#welcome-msg{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    cursor: default;
+}
+
+#btn{
+    margin: 40px auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    font-size: medium;
+    background: skyblue;
+}
+
+#container{
+    border: 5px solid black;
+    height: 250px;
+    width: 600px;
+    text-align: center;
+    border-radius: 20px;
+    margin: auto;
+    background-color: lemonchiffon;
+}
+
+#quote{
+    margin: 5px 20px;
+    font-weight: bold;
+    font-family: 'Dosis', sans-serif;
+    background-color: rgba(149, 34, 194, 0.534);
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+}
+
+#btn:hover{
+    background: deepskyblue;
+    cursor: pointer;
+}
+
+#btn:active{
+    background: dodgerblue;
+}
